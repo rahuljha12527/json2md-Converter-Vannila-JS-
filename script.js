@@ -23,7 +23,7 @@ console.log("data", data.title);
 function primaryKeyValue(input){
    let ObjectD=[];
   for(let i=0;i<input.length;i++){
-     ObjectD[i]=`${'\n'} ${'\b'}  ${input[i].title} : ${input[i].value}`;
+     ObjectD[i]=`${'\n'}   **${input[i].title}** : ${input[i].value}`;
      
 }
 return ObjectD;
