@@ -20,24 +20,22 @@ console.log("data.primary", data.primary);
 console.log("data", data);
 console.log("data", data.title);
 
-function primaryKeyValue(input){
-   let ObjectD=[];
-  for(let i=0;i<input.length;i++){
-     ObjectD[i]=`${'\n'}   **${input[i].title}** : ${input[i].value}`;
-     
-}
-return ObjectD;
+function primaryKeyValue(input) {
+  let ObjectD = [];
+  for (let i = 0; i < input.length; i++) {
+    ObjectD.push(`**${input[i].title}** : ${input[i].value}`);
+  }
+  return ObjectD;
 }
 
 // function primaryValue(input){
 //   let ObjectD=[];
 //  for(let i=0;i<input.length;i++){
 //     ObjectD[i]=input[i].value;
-    
+
 // // }
 // return ObjectD;
 // }
-
 
 function CreateTableFromJSON(input) {
   const jsonObj = [
@@ -48,7 +46,7 @@ function CreateTableFromJSON(input) {
           : "",
     },
     {
-      ol: [`${primaryKeyValue(input.primary)}`],
+      ol: primaryKeyValue(input.primary),
     },
     { h4: input.date != null && input.date != undefined ? input.date : "" },
     {
